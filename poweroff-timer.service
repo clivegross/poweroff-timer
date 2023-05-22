@@ -1,0 +1,8 @@
+[Unit]
+Description=Python poweroff server after timer elapses
+
+[Service]
+ExecStart=/usr/bin/python3 /usr/local/bin/poweroff-timer/poweroff-timer.py
+
+[Install]
+WantedBy=multi-user.target
