@@ -7,7 +7,7 @@ The program checks the system uptime every 5min and shuts down if `TIME_LIMIT` i
 
     python poweroff-timer.py
 
-### Run as a service using systemctl
+### Run as a systemd service using systemctl
 
 1. Download this repo into `/usr/local/bin/poweroff-timer` (or wherever you like)
 1. Edit `poweroff-timer.service` if required. Configured to run script from `/usr/local/bin/poweroff-timer`
