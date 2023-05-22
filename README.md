@@ -19,3 +19,24 @@ sudo systemctl start poweroff-timer    # Runs the script now
 sudo systemctl enable poweroff-timer   # Sets the script to run every boot
 journalctl -u poweroff-timer.service   # Check systemd journal for errors
 ```
+
+To disable the service:
+
+```
+sudo systemctl disable poweroff-timer  # Sets the script to not run
+```
+
+To stop the service:
+
+```
+sudo systemctl stop poweroff-timer    # Stops the script now
+```
+
+To reload the service after changing, eg `TIME_LIMIT` adjustment:
+
+```
+sudo systemctl stop poweroff-timer
+sudo systemctl daemon-reload
+sudo systemctl start poweroff-timer
+journalctl -u poweroff-timer.service
+```
